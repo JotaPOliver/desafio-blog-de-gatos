@@ -96,6 +96,11 @@ header {
     width: 4rem;
 }
 
+.button:hover {
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+    transform: scale(1.1);
+}
+
 .button+.button {
     margin-left: 1.2rem;
 }
@@ -137,6 +142,11 @@ header {
     object-fit: cover;
 }
 
+.item img:hover {
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+    transform: scale(1.1);
+}
+
 .sidebar h1 {
     margin-top: 1.4rem;
     margin-bottom: 3.2rem;   
@@ -159,6 +169,17 @@ footer {
     text-align: center;
     font-size: 1.6;
     font-weight: 600;
+}
+
+header {
+    --startY: -100%;
+    animation: move .2s;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(var(--startY));
+    }
 }
 
 @media (min-width: 500px) { /*quando a página estiver NO MÍNIMO EM 500px ela vai se comportar assim: */
@@ -211,6 +232,5 @@ footer {
     .main h1, .main p {
         padding-left: 0;
     }
-
 
 }
